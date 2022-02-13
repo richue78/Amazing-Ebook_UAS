@@ -24,13 +24,10 @@
 <body>
     <div id="app">
 
-        <div class="row p-4 bg-primary">
-            <div class="col-5">
-
-            </div>
-
-            <div class="col-5">
-                <a class="navbar-brand text-dark" href="" style="position: absolute;">
+        <div class=" p-4 bg-primary">
+            
+            <div class="d-flex justify-content-center">
+                <a class=" text-dark" href="/home" style="position: absolute;">
                     <h1>Amazing E-Book</h1>
                    
 
@@ -38,7 +35,7 @@
             </div>
             
     
-            <div class="col">
+            <div class="d-flex justify-content-end">
                 <div class="row">
                     
                     <div class="bg-warning">
@@ -80,7 +77,7 @@
         @auth
             
         <div class="bg-warning p-3">
-            <div class="container">
+            <div class="d-flex justify-content-center">
                 <div class="row">
                     <div class="col">
                         <a href="{{ url('/home') }}">{{ __('messages.Home') }}</a>
@@ -125,3 +122,5 @@
     </div>
 </body>
 </html>
+
+

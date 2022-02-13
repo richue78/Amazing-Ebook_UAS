@@ -2,9 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="justify-content-center">
+    <div class="d-flex justify-content-center">
           
-                <div> {{ __('messages.Register') }}</div>
+                <div class="mb-5">
+                    
+                       <h2> {{ __('messages.Register') }}</h2>
+                    
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">

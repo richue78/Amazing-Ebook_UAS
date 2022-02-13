@@ -2,12 +2,16 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="d-flex justify-content-center">
          <div class="Border_back">
-            <p class=" ">{{ __('messages.Success!') }}</p> <br>
-            <a href="/home">{{ __('messages.Click here to Home') }}</a>
+             <div class=" ">
+                 <p class=" ">{{ __('messages.Success!') }}</p>
+            
+                 <a href="/home">{{ __('messages.Click here to Home') }}</a>
+        </div>
+            
         </div>
 
-    </div>
+    
 </div>
 @endsection

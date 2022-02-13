@@ -25,7 +25,7 @@ class EbookController extends Controller
             'order_date' => date("Y/m/d"),
         ]);
 
-        return redirect()->back();
+        return redirect('/home');
     }
 
 

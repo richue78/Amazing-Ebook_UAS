@@ -2,11 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="d-flex justify-content-center">
         <div class="col-md-8">
-                <div>{{ __('messages.Login') }}</div>
-            <br>
-            <br>
+                <div class="mb-5 d-flex justify-content-center"><h3>{{ __('messages.Login') }}</h3></div>
+            
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
