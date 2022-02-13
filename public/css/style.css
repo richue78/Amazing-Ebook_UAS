@@ -1,0 +1,17 @@
+.Border_back {
+    background-color: white;
+    border: 10px solid #AFC9E9;
+    color: black;
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    justify-content: center; 
+    align-items: center;
+}
+
+.Border_back p{
+    margin-top: 180px;
+}
