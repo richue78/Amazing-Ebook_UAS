@@ -9,8 +9,8 @@
 
 ## Ujian Akhir Semester
 
-Nama:richie ritz
-NIM:2301850714
+ Nama:richie ritz
+ NIM:2301850714
 
 ## RunProject
     1.Run composer install to generate depedencies (the vendor folder)
