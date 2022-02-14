@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="mb-5 d-flex justify-content-center">
+                    <h3>{{ __('messages.Login') }}
+                    </h3>
+                </div>
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="col-md-8">
-                <div class="mb-5 d-flex justify-content-center"><h3>{{ __('messages.Login') }}</h3></div>
-            
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -36,20 +38,14 @@
                                 @enderror
                             </div>
                         </div>
-
-                        
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn btn-warning">
                                     {{ __('messages.Submit') }}
                                 </button>
-
-                               
-                            </div>
-                        </div>
+                        </div>   
                     </form>
         </div>
     </div>
 </div>
+                        
 @endsection
