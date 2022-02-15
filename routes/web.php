@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\EbookController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,21 +32,21 @@ Route::get('/logout', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/detail/{id}', [App\Http\Controllers\EbookController::class, 'show'])->middleware('auth');
-Route::post('/addToCart/{ebook}', [App\Http\Controllers\EbookController::class, 'addToCart'])->middleware('auth');
-Route::get('/cart/{user}', [App\Http\Controllers\EbookController::class, 'showCart'])->middleware('auth');
-Route::post('/cart/{order}', [App\Http\Controllers\EbookController::class, 'destroy'])->middleware('auth');
-Route::get('/submit', [App\Http\Controllers\EbookController::class, 'submit'])->middleware('auth');
+Route::get('/detail/{id}', [EbookController::class, 'show'])->middleware('auth');
+Route::post('/addToCart/{ebook}', [EbookController::class, 'addToCart'])->middleware('auth');
+Route::get('/cart/{user}', [EbookController::class, 'showCart'])->middleware('auth');
+Route::post('/cart/{order}', [EbookController::class, 'destroy'])->middleware('auth');
+Route::get('/submit', [EbookController::class, 'submit'])->middleware('auth');
 
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 
-Route::get('/profile', [App\Http\Controllers\UserController::class, 'editProfile'])->middleware('auth');
-Route::post('/profile/edit', [App\Http\Controllers\UserController::class, 'updateProfile'])->middleware('auth');
+Route::get('/profile', [UserController::class, 'editProfile'])->middleware('auth');
+Route::post('/profile/edit', [UserController::class, 'updateProfile'])->middleware('auth');
 
-Route::get('/accountmaintenance', [App\Http\Controllers\UserController::class, 'maintenanceProfile'])->middleware('admin');
+Route::get('/accountmaintenance', [UserController::class, 'maintenanceProfile'])->middleware('admin');
 
-Route::get('/updaterole/{id}', [App\Http\Controllers\UserController::class, 'updateRoleAccount'])->middleware('admin');
-Route::post('/updaterole/edit/{id}', [App\Http\Controllers\UserController::class, 'updateRoleById'])->middleware('admin');
-Route::post('/delete/{id}', [App\Http\Controllers\UserController::class, 'deleteRoleById'])->middleware('admin');
+Route::get('/updaterole/{id}', [UserController::class, 'updateRoleAccount'])->middleware('admin');
+Route::post('/updaterole/edit/{id}', [UserController::class, 'updateRoleById'])->middleware('admin');
+Route::post('/delete/{id}', [UserController::class, 'deleteRoleById'])->middleware('admin');
