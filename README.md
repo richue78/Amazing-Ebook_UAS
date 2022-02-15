@@ -24,3 +24,5 @@
     9.Run the web using php artisan serve 
     10.web is lunch!!!
 
+
+
