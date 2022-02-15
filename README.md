@@ -21,5 +21,6 @@
     5.CActivate XAMPP & MySQL service.
     6.Create the DB and configure the .env
     7.Run php artisan migrate:fresh --seed
-    9.Run the web using php artisan serve and voila it's ready to run!
+    9.Run the web using php artisan serve 
+    10.web is lunch!!!
 
